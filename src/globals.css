@@ -1,0 +1,178 @@
+.bg {
+  background-color: #241D40;
+}
+
+body {
+  background-color: #4A3B86 !important;
+  color: white !important;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.nav-link:hover {
+  color: #8A67EF !important;
+}
+
+.logo {
+  border-radius: 20px;
+}
+
+.navbar-collapse {
+  flex-direction: row-reverse;
+}
+
+.navbar-toggler {
+  background-color: #8A67EF !important;
+}
+
+.navbar-toggler-icon {
+  color: white !important;
+}
+
+.logo-home {
+  width: 500px;
+  border-radius: 100px;
+}
+
+.flex-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .flex-home {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-home {
+    width: 300px;
+    border-radius: 50px;
+  }
+}
+
+.fhome-1 {
+  font-size: 5em;
+  font-weight: 800;
+}
+
+.btn-meet {
+  background-color: #8A67EF;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-decoration-line: none;
+  font-weight: 500;
+}
+
+.btn-meet:hover {
+  background-color: #241D40;
+}
+
+.text-different {
+  color: #241D40;
+  -webkit-text-stroke: 1px white;
+}
+
+.fhome-2 {
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+.home {
+  margin-top: 124px;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.dropdown-menu {
+  background-color: #4A3B86 !important;
+}
+
+.dropdown-item {
+  color: white !important;
+  padding: 15px !important;
+}
+
+.dropdown-item:hover {
+  color: #241D40 !important;
+}
+
+.btn-wpp {
+  background-color: #25d366 !important;
+  border: none !important;
+  border-radius: 50px !important;
+  width: 70px !important;
+  padding: 5px !important;
+  left: auto !important;
+  margin: 10px !important;
+}
+
+.btn-wpp:hover {
+  background-color: #075E54 !important;
+}
+
+.card {
+  background-color: #8A67EF !important;
+}
+
+.btn-footer {
+  color: white !important;
+  margin: 5px;
+  font-size: 1.5em !important;
+  padding: 15px !important;
+}
+
+.btn-footer:hover {
+  background-color: white !important;
+  color: #4A3B86 !important;
+}
+
+.about-us {
+  margin-top: 124px;
+  text-align: center;
+  height: 100vh;
+}
+
+.categories-page {
+  margin-top: 124px;
+  text-align: center;
+  height: 100vh;
+}
+
+.category-name {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.img-about {
+  width: 200px;
+  border-radius: 100%;
+}
+
+.style-us {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.color-icon {
+  color: #241D40;
+  cursor: pointer;
+}
+.color-icon:hover {
+  color: #4A3B86;
+}
+
+.text-inform {
+  font-weight: 600;
+}
