@@ -11,7 +11,7 @@ function Home() {
             <h2 className='fhome-2 mb-5'>aproveite nossos produtos únicos!</h2>
             <a className='btn-meet' href='/'>Conheça nossos produtos <i className="bi bi-arrow-right"></i></a>
           </div>
-          <img className='logo-home m-5' src={Logo} />
+          <img className='logo-home' src={Logo} />
         </div>
       </div>
     </>

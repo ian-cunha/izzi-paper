@@ -2,6 +2,10 @@
   background-color: #241D40;
 }
 
+body, html {
+  overflow-x: hidden;
+  }
+
 body {
   background-color: #4A3B86 !important;
   color: white !important;
@@ -35,6 +39,10 @@ body {
 .logo-home {
   width: 500px;
   border-radius: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .flex-home {
@@ -49,7 +57,6 @@ body {
     justify-content: center;
     align-items: center;
   }
-
   .logo-home {
     width: 300px;
     border-radius: 50px;
@@ -59,6 +66,11 @@ body {
 .fhome-1 {
   font-size: 5em;
   font-weight: 800;
+}
+@media screen and (max-width: 800px) { 
+  .fhome-1 {
+    font-size: 3em;
+  }
 }
 
 .btn-meet {
