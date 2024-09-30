@@ -541,3 +541,13 @@ body {
     transform: translateY(-10px);
   }
 }
+
+.available-quantity {
+  background-color: #f2f2f2; /* Light background for contrast */
+  color: #8A67EF; /* Consistent text color */
+  font-size: 0.7em; /* Slightly larger text */
+  padding: 10px; /* Added padding for better spacing */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center; /* Centered text */
+  margin-top: 10px; /* Space above the element */
+}

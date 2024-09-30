@@ -20,7 +20,7 @@ const ProductList = () => {
         id: doc.id,
         ...doc.data()
       }));
-      console.log(productList); // Para verificar a estrutura dos dados
+      console.log(productList); // Verify the data structure
       setProducts(productList);
     };
     fetchProducts();
@@ -43,14 +43,26 @@ const ProductList = () => {
   };
 
   const handleAddToCart = (product) => {
+    if (product.qtd < quantity) {
+        setCartMessage('Sinto muito, não há quantidade suficiente em estoque.');
+        setTimeout(() => setCartMessage(''), 3000);
+        return;
+    }
+
     for (let i = 0; i < quantity; i++) {
-      addToCart(product);
+        addToCart(product);
     }
     setCartMessage(`"${product.name}" adicionado ao carrinho! Quantidade: ${quantity}`);
     setTimeout(() => setCartMessage(''), 3000);
-  };
+};
 
   const handleBuy = (product) => {
+    if (product.qtd < 1) {
+      setCartMessage('Sinto muito, produto fora do estoque.');
+      setTimeout(() => setCartMessage(''), 3000);
+      return;
+    }
+
     const message = `Estou interessado em comprar ${product.name} por R$ ${product.price.toFixed(2)}.`;
     const whatsappUrl = `https://wa.me/5581993964043?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -58,14 +70,17 @@ const ProductList = () => {
   };
 
   const increaseQuantity = () => {
-    setQuantity(prev => prev + 1);
-  };
-
-  const decreaseQuantity = () => {
-    if (quantity > 1) {
-      setQuantity(prev => prev - 1);
+    if (quantity < selectedProduct.qtd) {
+        setQuantity(prev => prev + 1);
     }
-  };
+};
+
+const decreaseQuantity = () => {
+    if (quantity > 1) {
+        setQuantity(prev => prev - 1);
+    }
+};
+
 
   return (
     <div>
@@ -105,16 +120,27 @@ const ProductList = () => {
                 <h2 className='popup-title'>{selectedProduct.name}</h2>
                 <p className='popup-price'>R$ {selectedProduct.price.toFixed(2)}</p>
                 <p className='popup-description'>{selectedProduct.description}</p>
+                <p className='available-quantity'>
+                  {selectedProduct.qtd < 1 ? 'Produto fora do estoque' : `Quantidade disponível: ${selectedProduct.qtd}`}
+                </p>
                 <div className='quantity-controls'>
-                  <button className="button" onClick={decreaseQuantity}>-</button>
+                  <button className="button" onClick={decreaseQuantity} disabled={selectedProduct.qtd < 1}>-</button>
                   <span>{quantity}</span>
-                  <button className="button" onClick={increaseQuantity}>+</button>
+                  <button className="button" onClick={increaseQuantity} disabled={selectedProduct.qtd < 1}>+</button>
                 </div>
                 <div className='popup-buttons'>
-                  <button className="button add-to-cart" onClick={() => { handleAddToCart(selectedProduct); closePopup(); }}>
+                  <button
+                    className="button add-to-cart"
+                    onClick={() => { handleAddToCart(selectedProduct); closePopup(); }}
+                    disabled={selectedProduct.qtd < 1}
+                  >
                     Adicionar ao Carrinho
                   </button>
-                  <button className="button buy" onClick={() => handleBuy(selectedProduct)}>
+                  <button
+                    className="button buy"
+                    onClick={() => handleBuy(selectedProduct)}
+                    disabled={selectedProduct.qtd < 1}
+                  >
                     Comprar
                   </button>
                 </div>
