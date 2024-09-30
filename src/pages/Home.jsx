@@ -7,7 +7,7 @@ function Home() {
       <div className="container home">
         <div className='flex-home'>
           <div>
-            <h1 className='fhome-1'><b className='text-different'>compre</b> na izzi.paper</h1>
+            <h1 className='fhome-1'><b className='text-different'>Compre</b> na izzi.paper</h1>
             <h2 className='fhome-2 mb-5'>aproveite nossos produtos únicos!</h2>
             <a className='btn-meet' href='/produtos'>Conheça nossos produtos <i className="bi bi-arrow-right"></i></a>
           </div>

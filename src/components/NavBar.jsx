@@ -6,12 +6,10 @@ function NavBar() {
     const { cart, clearCart, removeFromCart } = useCart();
     const [showModal, setShowModal] = useState(false);
 
-    // Função para calcular o total do carrinho
     const calculateTotal = () => {
         return cart.reduce((total, product) => total + product.price, 0).toFixed(2);
     };
 
-    // Agrupar produtos iguais no carrinho
     const groupedCart = cart.reduce((acc, product) => {
         const existing = acc.find(item => item.name === product.name);
         if (existing) {
@@ -29,7 +27,7 @@ function NavBar() {
         const whatsappUrl = `https://wa.me/5581993964043?text=${encodeURIComponent(message)}`;
 
         window.open(whatsappUrl, '_blank');
-        setShowModal(false); // Fecha o modal após finalizar
+        setShowModal(false);
     };
 
     return (
@@ -40,17 +38,18 @@ function NavBar() {
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
+                    <i className="bi bi-cart cart-icon" onClick={() => setShowModal(true)}> ({cart.length})</i>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link" href="/"><i className="bi bi-house"></i> INÍCIO</a>
+                            <a className="nav-link" href="/"><i className="bi bi-house"></i> Início</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/produtos"><i className="bi bi-shop-window"></i> PRODUTOS</a>
+                            <a className="nav-link" href="/produtos"><i className="bi bi-shop-window"></i> Produtos</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/sobre-nos"><i className="bi bi-person-circle"></i> SOBRE NÓS</a>
+                            <a className="nav-link" href="/sobre-nos"><i className="bi bi-person-circle"></i> Sobre mim</a>
                         </li>
                         <li className="nav-item">
                             <div className="nav-link" style={{ cursor: 'pointer' }} onClick={() => setShowModal(true)}>
