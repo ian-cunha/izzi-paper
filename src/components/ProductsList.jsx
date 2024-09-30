@@ -50,7 +50,9 @@ const ProductList = () => {
   };
 
   const handleBuy = (product) => {
-    alert(`Comprando ${product.name}`);
+    const message = `Estou interessado em comprar ${product.name} por R$ ${product.price.toFixed(2)}.`;
+    const whatsappUrl = `https://wa.me/5581993964043?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
     closePopup();
   };
 

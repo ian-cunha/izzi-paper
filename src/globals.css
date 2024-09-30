@@ -494,16 +494,21 @@ body {
   position: relative;
   font-size: 1.5rem; /* Ajuste o tamanho do ícone */
   margin-right: 10px; /* Espaço entre o ícone e o badge */
+  margin-right: 5px;
 }
 
 .cart-badge {
   position: absolute;
-  top: 6px; /* Ajuste a posição vertical para ficar mais perto */
-  right: 10px; /* Ajuste a posição horizontal para ficar mais perto */
   background-color: #ff4757; /* Cor de fundo do badge */
-  color: white; /* Cor do texto */
-  border-radius: 100%; /* Deixa o badge redondo */
-  padding: 0.2em 0.6em; /* Espaçamento interno */
-  font-size: 0.75rem; /* Tamanho do texto do badge */
-  font-weight: bold; /* Negrito */
+  top: -5px; /* Adjust this value to move the badge up */
+  right: -10px; /* Adjust this value to move the badge closer to the icon */
+  transform: translate(50%, -50%);
+  width: 20px; /* Set a fixed width */
+  height: 20px; /* Set a fixed height */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  font-size: 12px; /* Adjust font size as needed */
+  margin-left: -3px;
+  margin-top: 7px;
 }

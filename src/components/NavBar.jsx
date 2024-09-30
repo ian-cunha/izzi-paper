@@ -56,13 +56,13 @@ function NavBar() {
 
                 {/* Cart icon with badge */}
                 <div className="d-flex align-items-center">
-                    <div className="d-none d-lg-block" onClick={() => setShowModal(true)} style={{ cursor: 'pointer' }}>
+                    <div onClick={() => setShowModal(true)} style={{ cursor: 'pointer', position: 'relative' }}>
                         <i className="bi bi-cart cart-icon"></i>
-                        {cart.length > 0 && <span className="cart-badge">{cart.length}</span>}
-                    </div>
-                    <div className="d-lg-none" onClick={() => setShowModal(true)} style={{ cursor: 'pointer' }}>
-                        <i className="bi bi-cart cart-icon"></i>
-                        {cart.length > 0 && <span className="cart-badge">{cart.length}</span>}
+                        {cart.length > 0 && (
+                            <span className="cart-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                {cart.length}
+                            </span>
+                        )}
                     </div>
                 </div>
             </div>
