@@ -206,10 +206,12 @@ body {
 }
 
 .product-image {
-  max-width: 100%;
-  height: auto;
+  width: 200px; /* Defina a largura desejada */
+  height: 200px; /* Defina a altura igual à largura para tornar quadrada */
+  object-fit: cover; /* Faz com que a imagem preencha o espaço, mantendo a proporção */
   border-radius: 30px;
-  margin-bottom: 10px;
+  margin: 0 auto 10px; /* Centraliza a imagem e mantém a margem inferior */
+  display: block; /* Garante que a imagem seja tratada como bloco */
 }
 
 .price {
