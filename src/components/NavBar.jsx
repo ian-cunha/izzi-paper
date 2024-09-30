@@ -26,7 +26,7 @@ function NavBar() {
         const total = calculateTotal();
         const productList = groupedCart.map(product => `${product.name} (x${product.quantity}) - R$ ${product.price.toFixed(2)}`).join('%0A');
         const message = `Seu carrinho:\n${productList}\n\nTotal: R$ ${total}`;
-        const whatsappUrl = `https://api.whatsapp.com/send?5581993964043&text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://wa.me/5581993964043?text=${encodeURIComponent(message)}`;
 
         window.open(whatsappUrl, '_blank');
         setShowModal(false); // Fecha o modal após finalizar
