@@ -37,7 +37,7 @@ function NavBar() {
                     <img src={Logo} alt="Logo" width="30" height="30" className="d-inline-block align-text-top logo" />
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <i className="bi bi-three-dots text-light fs-1"></i>
+                    <span className="navbar-toggler-icon"></span>
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
@@ -54,13 +54,15 @@ function NavBar() {
                     </ul>
                 </div>
 
-                {/* Cart icon for desktop and mobile */}
+                {/* Cart icon with badge */}
                 <div className="d-flex align-items-center">
                     <div className="d-none d-lg-block" onClick={() => setShowModal(true)} style={{ cursor: 'pointer' }}>
-                        <i className="bi bi-cart cart-icon"> ({cart.length})</i>
+                        <i className="bi bi-cart cart-icon"></i>
+                        {cart.length > 0 && <span className="cart-badge">{cart.length}</span>}
                     </div>
                     <div className="d-lg-none" onClick={() => setShowModal(true)} style={{ cursor: 'pointer' }}>
-                        <i className="bi bi-cart cart-icon"> ({cart.length})</i>
+                        <i className="bi bi-cart cart-icon"></i>
+                        {cart.length > 0 && <span className="cart-badge">{cart.length}</span>}
                     </div>
                 </div>
             </div>
