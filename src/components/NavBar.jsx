@@ -70,7 +70,7 @@ function NavBar() {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title" id="exampleModalLabel">Carrinho de Compras</h5>
-                            <button type="button" className="btn btn-danger" onClick={() => setShowModal(false)}><i className="bi bi-x"></i></button>
+                            <button type="button" className="btn btn-danger" onClick={() => setShowModal(false)}>Fechar</button>
                         </div>
                         <div className="modal-body">
                             {groupedCart.length === 0 ? (

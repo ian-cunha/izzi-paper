@@ -302,6 +302,7 @@ body {
 
 .btn-secondary {
   background-color: #8A67EF !important;
+  border: 0 !important;
 }
 .btn-secondary:hover {
   background-color: #241D40 !important;
@@ -309,6 +310,20 @@ body {
 
 .btn-danger {
   border-radius: 10px !important;
+  border: 0 !important;
+  background-color: #4A3B86 !important;
+}
+.btn-danger:hover {
+  background-color: #241D40 !important;
+}
+
+.btn-success {
+  background-color: #9b59b6 !important;
+  border: 0 !important;
+}
+
+.btn-success:hover {
+  background-color: #241D40 !important;
 }
 
 .popup {
