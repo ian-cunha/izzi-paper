@@ -37,7 +37,7 @@ function NavBar() {
                     <img src={Logo} alt="Logo" width="30" height="30" className="d-inline-block align-text-top logo" />
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                    <i className="bi bi-three-dots text-light fs-1"></i>
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
