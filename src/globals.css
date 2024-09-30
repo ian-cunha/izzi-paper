@@ -28,11 +28,8 @@ body {
 }
 
 .navbar-toggler {
-  background-color: #8A67EF !important;
-}
-
-.navbar-toggler-icon {
-  color: white !important;
+  background-color: transparent !important;
+  border: 0 !important;
 }
 
 .logo-home {

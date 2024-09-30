@@ -37,9 +37,9 @@ function NavBar() {
                     <img src={Logo} alt="Logo" width="30" height="30" className="d-inline-block align-text-top logo" />
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                    <i className="bi bi-cart cart-icon" onClick={() => setShowModal(true)}> ({cart.length})</i>
+                <i className="bi bi-three-dots text-light fs-1"></i>
                 </button>
+
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item">
@@ -51,12 +51,17 @@ function NavBar() {
                         <li className="nav-item">
                             <a className="nav-link" href="/sobre-nos"><i className="bi bi-person-circle"></i> Sobre mim</a>
                         </li>
-                        <li className="nav-item">
-                            <div className="nav-link" style={{ cursor: 'pointer' }} onClick={() => setShowModal(true)}>
-                                <i className="bi bi-cart"></i> Carrinho ({cart.length})
-                            </div>
-                        </li>
                     </ul>
+                </div>
+
+                {/* Cart icon for desktop and mobile */}
+                <div className="d-flex align-items-center">
+                    <div className="d-none d-lg-block" onClick={() => setShowModal(true)} style={{ cursor: 'pointer' }}>
+                        <i className="bi bi-cart cart-icon"> ({cart.length})</i>
+                    </div>
+                    <div className="d-lg-none" onClick={() => setShowModal(true)} style={{ cursor: 'pointer' }}>
+                        <i className="bi bi-cart cart-icon"> ({cart.length})</i>
+                    </div>
                 </div>
             </div>
 
