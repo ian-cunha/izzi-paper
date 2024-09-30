@@ -10,7 +10,7 @@ const ProductList = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [cartMessage, setCartMessage] = useState('');
-  const [quantity, setQuantity] = useState(1); // Controle de quantidade
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -20,25 +20,26 @@ const ProductList = () => {
         id: doc.id,
         ...doc.data()
       }));
+      console.log(productList); // Para verificar a estrutura dos dados
       setProducts(productList);
     };
     fetchProducts();
   }, []);
 
   const filteredProducts = products.filter(product =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    product && product.name && product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const openPopup = (product) => {
     setSelectedProduct(product);
     setIsPopupOpen(true);
-    setQuantity(1); // Reseta a quantidade ao abrir o popup
+    setQuantity(1);
   };
 
   const closePopup = () => {
     setIsPopupOpen(false);
     setSelectedProduct(null);
-    setQuantity(1); // Reseta a quantidade ao fechar
+    setQuantity(1);
   };
 
   const handleAddToCart = (product) => {
@@ -46,7 +47,7 @@ const ProductList = () => {
       addToCart(product);
     }
     setCartMessage(`"${product.name}" adicionado ao carrinho! Quantidade: ${quantity}`);
-    setTimeout(() => setCartMessage(''), 3000); // Limpa a mensagem após 3 segundos
+    setTimeout(() => setCartMessage(''), 3000);
   };
 
   const handleBuy = (product) => {
@@ -79,7 +80,7 @@ const ProductList = () => {
         {filteredProducts.map(product => (
           <div key={product.id} className="product-card" onClick={() => openPopup(product)} style={{ cursor: 'pointer' }}>
             {product.image && <img src={product.image} alt={product.name} className="product-image" />}
-            <h2 className='p-name'>{product.name}</h2>
+            <h2 className='p-name'>{product.name || 'Produto sem nome'}</h2>
             <p className='price'>R$ {product.price.toFixed(2)}</p>
             <div className='buttons-product'>
               <button className="button add-to-cart" onClick={(e) => { e.stopPropagation(); handleAddToCart(product); }}>
