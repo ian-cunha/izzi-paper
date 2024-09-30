@@ -11,9 +11,20 @@ function NavBar() {
         return cart.reduce((total, product) => total + product.price, 0).toFixed(2);
     };
 
+    // Agrupar produtos iguais no carrinho
+    const groupedCart = cart.reduce((acc, product) => {
+        const existing = acc.find(item => item.name === product.name);
+        if (existing) {
+            existing.quantity += 1;
+        } else {
+            acc.push({ ...product, quantity: 1 });
+        }
+        return acc;
+    }, []);
+
     const handleCheckout = () => {
         const total = calculateTotal();
-        const productList = cart.map(product => `${product.name} - R$ ${product.price.toFixed(2)}`).join('%0A');
+        const productList = groupedCart.map(product => `${product.name} (x${product.quantity}) - R$ ${product.price.toFixed(2)}`).join('%0A');
         const message = `Seu carrinho:\n${productList}\n\nTotal: R$ ${total}`;
         const whatsappUrl = `https://api.whatsapp.com/send?5581993964043&text=${encodeURIComponent(message)}`;
 
@@ -43,7 +54,7 @@ function NavBar() {
                         </li>
                         <li className="nav-item">
                             <div className="nav-link" style={{ cursor: 'pointer' }} onClick={() => setShowModal(true)}>
-                                <i className="bi bi-cart"></i> ({cart.length})
+                                <i className="bi bi-cart"></i> Carrinho ({cart.length})
                             </div>
                         </li>
                     </ul>
@@ -59,17 +70,17 @@ function NavBar() {
                             <button type="button" className="btn btn-danger" onClick={() => setShowModal(false)}><i className="bi bi-x"></i></button>
                         </div>
                         <div className="modal-body">
-                            {cart.length === 0 ? (
+                            {groupedCart.length === 0 ? (
                                 <p>Seu carrinho está vazio.</p>
                             ) : (
                                 <>
                                     <ul className="list-group">
-                                        {cart.map((product, index) => (
+                                        {groupedCart.map((product, index) => (
                                             <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
-                                                {product.name}
+                                                {`${product.name} (x${product.quantity})`}
                                                 <div>
-                                                    <span className="badge bg-buttons rounded-pill">R$ {product.price.toFixed(2)}</span>
-                                                    <button className="btn btn-danger btn-sm ms-2" onClick={() => removeFromCart(index)}><i className="bi bi-x"></i></button>
+                                                    <span className="badge bg-buttons rounded-pill">R$ {(product.price * product.quantity).toFixed(2)}</span>
+                                                    <button className="btn btn-danger btn-sm ms-2" onClick={() => removeFromCart(cart.findIndex(item => item.name === product.name))}><i className="bi bi-x"></i></button>
                                                 </div>
                                             </li>
                                         ))}
@@ -81,7 +92,7 @@ function NavBar() {
                             )}
                         </div>
                         <div className="modal-footer">
-                            {cart.length > 0 && (
+                            {groupedCart.length > 0 && (
                                 <>
                                     <button type="button" className="btn btn-secondary" onClick={clearCart}>Limpar Carrinho</button>
                                     <button type="button" className="btn btn-success" onClick={handleCheckout}>Finalizar Compra</button>
