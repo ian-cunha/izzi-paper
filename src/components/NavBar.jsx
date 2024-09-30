@@ -48,9 +48,6 @@ function NavBar() {
                         <li className="nav-item">
                             <a className="nav-link" href="/produtos"><i className="bi bi-shop-window"></i> Produtos</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/sobre-nos"><i className="bi bi-person-circle"></i> Sobre mim</a>
-                        </li>
                     </ul>
                 </div>
 

@@ -4,6 +4,7 @@ function Footer() {
         <div className="card text-center">
             <div className="card-header">
                 <a href="/" className="btn btn-footer"><i className="bi bi-house"></i> Início</a>
+                <a href="/produtos" className="btn btn-footer"><i className="bi bi-shop-window"></i> Produtos</a>
                 <a href="/sobre-nos" className="btn btn-footer"><i className="bi bi-person-circle"></i> Sobre mim</a>
             </div>
             <div className="card-body">
