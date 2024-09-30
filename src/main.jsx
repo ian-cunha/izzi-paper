@@ -15,16 +15,13 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 // Pages
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
+import Store from './pages/Store';
 
 // Components
 import NavBar from './components/NavBar';
 import Wpp from './components/Wpp';
 import Footer from './components/Footer';
-
-// Categorias
-import Toys from './categories/Toys';
-import Desk from './categories/Desk';
-import Customized from './categories/Customized';
+import { CartProvider } from './components/CartContext';
 
 const router = createBrowserRouter([
   {
@@ -32,16 +29,8 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/brinquedos",
-    element: <Toys />,
-  },
-  {
-    path: "/artigos-de-escritorio",
-    element: <Desk />,
-  },
-  {
-    path: "/personalizados",
-    element: <Customized />,
+    path: "/produtos",
+    element: <Store />
   },
   {
     path: "/sobre-nos",
@@ -51,9 +40,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <CartProvider>
     <NavBar />
     <RouterProvider router={router} />
     <Wpp />
     <Footer />
+    </CartProvider>
   </React.StrictMode>,
 )
