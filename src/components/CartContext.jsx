@@ -1,5 +1,5 @@
-// CartContext.js
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
+import PropTypes from 'prop-types'; // Importa o PropTypes
 
 const CartContext = createContext();
 
@@ -32,6 +32,11 @@ export const CartProvider = ({ children }) => {
             {children}
         </CartContext.Provider>
     );
+};
+
+// Adiciona a validação de propTypes
+CartProvider.propTypes = {
+    children: PropTypes.node.isRequired, // Valida que 'children' é obrigatório e do tipo 'node'
 };
 
 export const useCart = () => useContext(CartContext);

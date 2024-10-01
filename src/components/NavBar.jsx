@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Logo from '../assets/logo.png';
 import { useCart } from './CartContext';
 
@@ -25,10 +25,10 @@ function NavBar() {
         const productList = groupedCart.map(product => `${product.name} (x${product.quantity}) - R$ ${product.price.toFixed(2)}`).join('\n'); // Trocar '%0A' por '\n'
         const message = `Seu carrinho:\n${productList}\n\nTotal: R$ ${total}`;
         const whatsappUrl = `https://wa.me/5581993964043?text=${encodeURIComponent(message)}`;
-    
+
         window.open(whatsappUrl, '_blank');
         setShowModal(false);
-    };    
+    };
 
     return (
         <nav className="navbar fixed-top navbar-expand-lg bg">

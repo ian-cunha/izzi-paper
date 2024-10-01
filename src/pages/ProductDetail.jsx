@@ -1,5 +1,4 @@
-// ProductDetail.jsx
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { db } from '../services/firebaseConfig';
 import { doc, getDoc } from 'firebase/firestore';
 import { useParams } from 'react-router-dom';

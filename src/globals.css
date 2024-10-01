@@ -2,9 +2,10 @@
   background-color: #241D40;
 }
 
-body, html {
+body,
+html {
   overflow-x: hidden;
-  }
+}
 
 body {
   background-color: #4A3B86 !important;
@@ -52,6 +53,7 @@ body {
     justify-content: center;
     align-items: center;
   }
+
   .logo-home {
     width: 300px;
     border-radius: 50px;
@@ -62,7 +64,8 @@ body {
   font-size: 5em;
   font-weight: 800;
 }
-@media screen and (max-width: 800px) { 
+
+@media screen and (max-width: 800px) {
   .fhome-1 {
     font-size: 3em;
   }
@@ -91,8 +94,12 @@ body {
 }
 
 .home {
-  margin-top: 80px;
+  margin-top: 30px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 75vh;
 }
 
 .dropdown-menu {
@@ -174,6 +181,7 @@ body {
   color: #241D40;
   cursor: pointer;
 }
+
 .color-icon:hover {
   color: #4A3B86;
 }
@@ -185,6 +193,10 @@ body {
 .store {
   margin-top: 70px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 120px;
 }
 
 /* ProductList.css */
@@ -206,12 +218,17 @@ body {
 }
 
 .product-image {
-  width: 200px; /* Defina a largura desejada */
-  height: 200px; /* Defina a altura igual à largura para tornar quadrada */
-  object-fit: cover; /* Faz com que a imagem preencha o espaço, mantendo a proporção */
+  width: 200px;
+  /* Defina a largura desejada */
+  height: 200px;
+  /* Defina a altura igual à largura para tornar quadrada */
+  object-fit: cover;
+  /* Faz com que a imagem preencha o espaço, mantendo a proporção */
   border-radius: 30px;
-  margin: 0 auto 10px; /* Centraliza a imagem e mantém a margem inferior */
-  display: block; /* Garante que a imagem seja tratada como bloco */
+  margin: 0 auto 10px;
+  /* Centraliza a imagem e mantém a margem inferior */
+  display: block;
+  /* Garante que a imagem seja tratada como bloco */
 }
 
 .price {
@@ -255,22 +272,26 @@ body {
 }
 
 .add-to-cart {
-  background-color: #4a90e2; /* Formal Blue */
+  background-color: #4a90e2;
+  /* Formal Blue */
   color: white;
 }
 
 .add-to-cart:hover {
-  background-color: #357abd; /* Darker Blue */
+  background-color: #357abd;
+  /* Darker Blue */
   transform: scale(1.05);
 }
 
 .buy {
-  background-color: #7ed321; /* Formal Green */
+  background-color: #7ed321;
+  /* Formal Green */
   color: white;
 }
 
 .buy:hover {
-  background-color: #5cbf20; /* Darker Green */
+  background-color: #5cbf20;
+  /* Darker Green */
   transform: scale(1.05);
 }
 
@@ -304,6 +325,7 @@ body {
   background-color: #8A67EF !important;
   border: 0 !important;
 }
+
 .btn-secondary:hover {
   background-color: #241D40 !important;
 }
@@ -313,6 +335,7 @@ body {
   border: 0 !important;
   background-color: #4A3B86 !important;
 }
+
 .btn-danger:hover {
   background-color: #241D40 !important;
 }
@@ -352,12 +375,14 @@ body {
 
 .popup-inner {
   display: flex;
-  flex-direction: row; /* Modo padrão: flex em linha */
+  flex-direction: row;
+  /* Modo padrão: flex em linha */
   padding: 20px;
 }
 
 .popup-image {
-  width: 50%; /* Imagem ocupa metade da largura */
+  width: 50%;
+  /* Imagem ocupa metade da largura */
   height: auto;
   border-radius: 8px;
 }
@@ -365,7 +390,8 @@ body {
 .popup-info {
   display: flex;
   flex-direction: column;
-  margin-left: 20px; /* Espaçamento entre a imagem e as informações */
+  margin-left: 20px;
+  /* Espaçamento entre a imagem e as informações */
 }
 
 .popup-title {
@@ -399,29 +425,34 @@ body {
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  background-color: #8A67EF
-  ; /* Cor similar ao botão da Amazon */
+  background-color: #8A67EF;
+  /* Cor similar ao botão da Amazon */
   color: white;
   transition: background-color 0.3s;
 }
 
 .button:hover {
-  background-color: #241D40; /* Cor ao passar o mouse */
+  background-color: #241D40;
+  /* Cor ao passar o mouse */
 }
 
 /* Responsividade */
 @media (max-width: 600px) {
   .popup-inner {
-    flex-direction: column; /* Modo coluna em telas menores */
+    flex-direction: column;
+    /* Modo coluna em telas menores */
   }
 
   .popup-image {
-    width: 100%; /* Imagem ocupa toda a largura em telas pequenas */
-    margin-bottom: 10px; /* Espaçamento inferior */
+    width: 100%;
+    /* Imagem ocupa toda a largura em telas pequenas */
+    margin-bottom: 10px;
+    /* Espaçamento inferior */
   }
 
   .popup-info {
-    margin-left: 0; /* Remove o espaçamento à esquerda */
+    margin-left: 0;
+    /* Remove o espaçamento à esquerda */
   }
 }
 
@@ -440,23 +471,35 @@ body {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #28a745; /* Cor de fundo verde */
+  background-color: #28a745;
+  /* Cor de fundo verde */
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  animation: fadeIn 0.5s, fadeOut 0.5s 2.5s; /* Animação */
+  animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+  /* Animação */
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 .product-card {
@@ -464,8 +507,10 @@ body {
 }
 
 .product-card:hover {
-  transform: scale(1.05); /* Aumenta o tamanho do card */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+  transform: scale(1.05);
+  /* Aumenta o tamanho do card */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  /* Adiciona uma sombra */
 }
 
 .quantity-controls {
@@ -488,66 +533,98 @@ body {
 
 .search-input:focus {
   outline: none;
-  border: 2px solid #9b59b6; /* Cor da borda neon */
-  box-shadow: 0 0 5px #9b59b6, 0 0 10px #9b59b6; /* Efeito de brilho */
+  border: 2px solid #9b59b6;
+  /* Cor da borda neon */
+  box-shadow: 0 0 5px #9b59b6, 0 0 10px #9b59b6;
+  /* Efeito de brilho */
 }
 
 /* styles.css or your relevant CSS file */
 @media (max-width: 768px) {
   .navbar-nav {
-      justify-content: center; /* Center items */
-      width: 100%; /* Take full width */
+    justify-content: center;
+    /* Center items */
+    width: 100%;
+    /* Take full width */
   }
+
   .navbar-toggler {
-      display: flex;
-      align-items: center;
+    display: flex;
+    align-items: center;
   }
+
   .cart-icon {
-      margin-left: 10px; /* Space between menu icon and cart icon */
+    margin-left: 10px;
+    /* Space between menu icon and cart icon */
   }
 }
 
 .cart-icon {
   position: relative;
-  font-size: 1.5rem; /* Ajuste o tamanho do ícone */
-  margin-right: 10px; /* Espaço entre o ícone e o badge */
+  font-size: 1.5rem;
+  /* Ajuste o tamanho do ícone */
+  margin-right: 10px;
+  /* Espaço entre o ícone e o badge */
   margin-right: 5px;
 }
 
 .cart-badge {
   position: absolute;
-  background-color: #ff4757; /* Cor de fundo do badge */
-  top: -5px; /* Adjust this value to move the badge up */
-  right: -10px; /* Adjust this value to move the badge closer to the icon */
+  background-color: #ff4757;
+  /* Cor de fundo do badge */
+  top: -5px;
+  /* Adjust this value to move the badge up */
+  right: -10px;
+  /* Adjust this value to move the badge closer to the icon */
   transform: translate(50%, -50%);
-  width: 20px; /* Set a fixed width */
-  height: 20px; /* Set a fixed height */
-  display: flex; /* Use flexbox */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  font-size: 12px; /* Adjust font size as needed */
+  width: 20px;
+  /* Set a fixed width */
+  height: 20px;
+  /* Set a fixed height */
+  display: flex;
+  /* Use flexbox */
+  align-items: center;
+  /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
+  font-size: 12px;
+  /* Adjust font size as needed */
   margin-left: -3px;
   margin-top: 7px;
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-20px);
   }
+
   60% {
     transform: translateY(-10px);
   }
 }
 
 .available-quantity {
-  background-color: #f2f2f2; /* Light background for contrast */
-  color: #8A67EF; /* Consistent text color */
-  font-size: 0.7em; /* Slightly larger text */
-  padding: 10px; /* Added padding for better spacing */
-  border-radius: 8px; /* Rounded corners */
-  text-align: center; /* Centered text */
-  margin-top: 10px; /* Space above the element */
+  background-color: #f2f2f2;
+  /* Light background for contrast */
+  color: #8A67EF;
+  /* Consistent text color */
+  font-size: 0.7em;
+  /* Slightly larger text */
+  padding: 10px;
+  /* Added padding for better spacing */
+  border-radius: 8px;
+  /* Rounded corners */
+  text-align: center;
+  /* Centered text */
+  margin-top: 10px;
+  /* Space above the element */
 }

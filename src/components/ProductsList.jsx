@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { db } from '../services/firebaseConfig';
 import { collection, getDocs } from 'firebase/firestore';
 import { useCart } from './CartContext';
@@ -20,7 +20,7 @@ const ProductList = () => {
         id: doc.id,
         ...doc.data()
       }));
-      console.log(productList); // Verify the data structure
+      console.log(productList);
       setProducts(productList);
     };
     fetchProducts();
@@ -44,17 +44,17 @@ const ProductList = () => {
 
   const handleAddToCart = (product) => {
     if (product.qtd < quantity) {
-        setCartMessage('Sinto muito, não há quantidade suficiente em estoque.');
-        setTimeout(() => setCartMessage(''), 3000);
-        return;
+      setCartMessage('Sinto muito, não há quantidade suficiente em estoque.');
+      setTimeout(() => setCartMessage(''), 3000);
+      return;
     }
 
     for (let i = 0; i < quantity; i++) {
-        addToCart(product);
+      addToCart(product);
     }
     setCartMessage(`"${product.name}" adicionado ao carrinho! Quantidade: ${quantity}`);
     setTimeout(() => setCartMessage(''), 3000);
-};
+  };
 
   const handleBuy = (product) => {
     if (product.qtd < 1) {
@@ -71,15 +71,15 @@ const ProductList = () => {
 
   const increaseQuantity = () => {
     if (quantity < selectedProduct.qtd) {
-        setQuantity(prev => prev + 1);
+      setQuantity(prev => prev + 1);
     }
-};
+  };
 
-const decreaseQuantity = () => {
+  const decreaseQuantity = () => {
     if (quantity > 1) {
-        setQuantity(prev => prev - 1);
+      setQuantity(prev => prev - 1);
     }
-};
+  };
 
 
   return (

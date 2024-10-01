@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Logo from '../assets/logo.png';
 
 function Home() {
   const [text, setText] = useState('');
   const targetText = 'izzi.paper';
-  const typingSpeed = 150; // Tempo em milissegundos entre cada letra
+  const typingSpeed = 150;
 
   useEffect(() => {
     let index = 0;
 
     const type = () => {
       if (index < targetText.length) {
-        setText(targetText.slice(0, index + 1)); // Adiciona a letra atual corretamente
+        setText(targetText.slice(0, index + 1));
         index++;
         setTimeout(type, typingSpeed);
       }
