@@ -48,6 +48,10 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+  .home {
+    padding: 380px;
+  }
+
   .flex-home {
     display: block;
     justify-content: center;
