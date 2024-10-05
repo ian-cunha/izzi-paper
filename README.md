@@ -9,7 +9,7 @@ Este projeto é uma aplicação web construída com ReactJS e TypeScript, utiliz
 ## Tecnologias Utilizadas
 
 - **ReactJS**: Biblioteca JavaScript para construção de interfaces de usuário.
-- **TypeScript**: Superconjunto do JavaScript que adiciona tipagem estática.
+- **JavaScript**: Linguagem de programação utilizada para o desenvolvimento da aplicação.
 - **Firebase**: Plataforma do Google que fornece serviços como autenticação, banco de dados em tempo real, hospedagem e muito mais.
 - **NoSQL**: Tipo de banco de dados utilizado para armazenar dados em um formato não relacional.
 
