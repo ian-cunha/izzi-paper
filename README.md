@@ -10,7 +10,7 @@ Este projeto é uma aplicação web construída com ReactJS e JavaScript, utiliz
 
 - **ReactJS**: Biblioteca JavaScript para construção de interfaces de usuário.
 - **JavaScript**: Linguagem de programação utilizada para o desenvolvimento da aplicação.
-- **Firebase**: Plataforma do Google que fornece serviços como autenticação, banco de dados em tempo real, hospedagem e muito mais.
+- **Firebase**: Plataforma do Google que fornece serviços de banco de dados em tempo real.
 - **NoSQL**: Tipo de banco de dados utilizado para armazenar dados em um formato não relacional.
 
 ## Licença
