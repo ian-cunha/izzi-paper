@@ -15,4 +15,4 @@ Este projeto é uma aplicação web construída com ReactJS e TypeScript, utiliz
 
 ## Licença
 
-Esse projeto está sob a minha licença (Ivanize Oliveira e Ian Cunha).
+Esse projeto está sob a licença de (Ivanize Oliveira e Ian Cunha).
