@@ -4,7 +4,7 @@ Loja de produtos de papelaria.
 
 ## Sobre
 
-Este projeto é uma aplicação web construída com ReactJS e TypeScript, utilizando Firebase como banco de dados NoSQL.
+Este projeto é uma aplicação web construída com ReactJS e JavaScript, utilizando Firebase como banco de dados NoSQL.
 
 ## Tecnologias Utilizadas
 
