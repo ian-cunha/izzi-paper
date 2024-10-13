@@ -3,7 +3,7 @@ import Logo from '../assets/logo.png';
 
 function Home() {
   const [text, setText] = useState('');
-  const targetText = 'izzi.paper';
+  const targetText = 'izzi paper';
   const typingSpeed = 150;
 
   useEffect(() => {
