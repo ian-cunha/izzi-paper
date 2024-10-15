@@ -1,4 +1,4 @@
-# izzi paper
+# IZZI Paper
 
 Loja de produtos de papelaria, chaveiros e mangás.
 
