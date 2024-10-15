@@ -1,6 +1,6 @@
 # izzi.paper
 
-Loja de produtos de papelaria.
+Loja de produtos de papelaria, chaveiros e mangás.
 
 ## Sobre
 
