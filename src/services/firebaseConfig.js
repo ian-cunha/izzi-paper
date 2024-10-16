@@ -2,12 +2,12 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBARQqPkRucev0rIm5BxL6XwRmjFHFFgbA",
-  authDomain: "izzipaper-f6c68.firebaseapp.com",
-  projectId: "izzipaper-f6c68",
-  storageBucket: "izzipaper-f6c68.appspot.com",
-  messagingSenderId: "932538403272",
-  appId: "1:932538403272:web:55f8071ac096e1766418fd"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
