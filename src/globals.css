@@ -152,8 +152,9 @@ body {
 
 .about-us {
   margin-top: 124px;
+  margin-bottom: 20px;
   text-align: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .categories-page {
